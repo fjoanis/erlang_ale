@@ -1,7 +1,7 @@
 PROJECT=erlang_ale
 
 UNAME := $(shell uname)
-EI_LIB:=$(shell find /usr/local/lib/erlang /usr/lib/erlang -name ei.h -printf '%h' 2> /dev/null | head -1)
+EI_LIB:=$(shell find /usr/local/lib/erlang /usr/lib/erlang -name ei.h -printf '%h\n' 2> /dev/null | head -1)
 
 # Cross compilation bits for Mac, for development purposes only
 ifeq ($(UNAME), Darwin)
